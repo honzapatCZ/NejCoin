@@ -71,11 +71,7 @@ DISABLE_VS_WARNINGS(4355)
 
 namespace cryptonote
 {
-  const command_line::arg_descriptor<bool, false> arg_gns_tx  = {
-    "print-genesis-tx"
-  , "checkpoints from DNS server will be enforced"
-  , false
-  };
+  
   const command_line::arg_descriptor<bool, false> arg_testnet_on  = {
     "testnet"
   , "Run on testnet. The wallet must be launched with --testnet flag."
@@ -311,7 +307,6 @@ namespace cryptonote
   //-----------------------------------------------------------------------------------
   void core::init_options(boost::program_options::options_description& desc)
   {
-    command_line::add_arg(desc, arg_gns_tx);
     command_line::add_arg(desc, arg_data_dir);
 
     command_line::add_arg(desc, arg_test_drop_download);
@@ -373,8 +368,6 @@ namespace cryptonote
       set_checkpoints_file_path(checkpoint_json_hashfile_fullpath.string());
     }
     
-    if (command_line::get_arg(vm, arg_gns_tx) == true)
-      own_gns_tx();
     
     set_enforce_dns_checkpoints(command_line::get_arg(vm, arg_dns_checkpoints));
     test_drop_download_height(command_line::get_arg(vm, arg_test_drop_download_height));
@@ -731,19 +724,6 @@ namespace cryptonote
     return true;
   }
   
-  //-----------------------------------------------------------------------------------------------
-  void core::own_gns_tx()
-  {
-      Logging::ConsoleLogger logger;
-      CryptoNote::Transaction tx = CryptoNote::CurrencyBuilder(logger).generateGenesisTransaction();
-      CryptoNote::BinaryArray txb = CryptoNote::toBinaryArray(tx);
-      std::string tx_hex = Common::toHex(txb);
-
-      std::cout << "Insert this line into your coin configuration file as is: " << std::endl;
-      std::cout << "const char GENESIS_COINBASE_TX_HEX[] = \"" << tx_hex << "\";" << std::endl;
-
-      return;
-  }
   
   //-----------------------------------------------------------------------------------------------
   void core::test_drop_download()

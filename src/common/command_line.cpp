@@ -71,7 +71,7 @@ namespace command_line
 
     return false;
   }
-
+  const command_line::arg_descriptor<bool> arg_gns_tx  = {"print-genesis-tx" , "prints out genesis block" };
   const arg_descriptor<bool> arg_help = {"help", "Produce help message"};
   const arg_descriptor<bool> arg_version = {"version", "Output version information"};
 }

@@ -294,7 +294,7 @@ namespace command_line
     return get_arg(vm, arg);
   }
 
-
+  extern const arg_descriptor<bool> arg_gns_tx;
   extern const arg_descriptor<bool> arg_help;
   extern const arg_descriptor<bool> arg_version;
 }
