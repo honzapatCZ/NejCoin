@@ -367,7 +367,7 @@ Binaries for Windows are built on Windows using the MinGW toolchain within
 POSIX system. The toolchain runs within the environment and *cross-compiles*
 binaries that can run outside of the environment as a regular Windows
 application.
-
+#### *Note that if you have msys installed somewhere else than c:/msys64 or c:/msys32 as me which have it on e:/Programy/msys64 you will have to tweak MakeFile to make it work with your configuration*
 **Preparing the build environment**
 
 * Download and install the [MSYS2 installer](https://www.msys2.org), either the 64-bit or the 32-bit package, depending on your system.
