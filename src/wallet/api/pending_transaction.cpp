@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -43,7 +44,7 @@
 
 using namespace std;
 
-namespace Monero {
+namespace Nejcoin {
 
 PendingTransaction::~PendingTransaction() {}
 
@@ -264,5 +265,5 @@ std::vector<std::string> PendingTransactionImpl::signersKeys() const {
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;
 

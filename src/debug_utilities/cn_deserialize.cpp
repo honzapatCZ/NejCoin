@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -35,8 +36,8 @@
 #include "common/command_line.h"
 #include "version.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "debugtools.deserialize"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "debugtools.deserialize"
 
 namespace po = boost::program_options;
 using namespace epee;
@@ -103,7 +104,7 @@ int main(int argc, char* argv[])
 
   if (command_line::get_arg(vm, command_line::arg_help))
   {
-    std::cout << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL << ENDL;
+    std::cout << "Nejcoin '" << NEJCOIN_RELEASE_NAME << "' (v" << NEJCOIN_VERSION_FULL << ")" << ENDL << ENDL;
     std::cout << desc_options << std::endl;
     return 1;
   }

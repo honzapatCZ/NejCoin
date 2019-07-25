@@ -1,3 +1,4 @@
+# Copyright (c) 2019-2019, Nejcraft 
 # Copyright (c) 2014-2019, The Monero Project
 # 
 # All rights reserved.
@@ -74,8 +75,8 @@ file(COPY
   data/wallet_9svHk1.keys
   data/wallet_9svHk1
   data/outputs
-  data/unsigned_monero_tx
-  data/signed_monero_tx
+  data/unsigned_nejcoin_tx
+  data/signed_nejcoin_tx
   DESTINATION data)
 
 add_subdirectory(core_tests)

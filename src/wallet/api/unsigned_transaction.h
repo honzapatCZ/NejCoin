@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -35,7 +36,7 @@
 #include <vector>
 
 
-namespace Monero {
+namespace Nejcoin {
 
 class WalletImpl;
 class UnsignedTransactionImpl : public UnsignedTransaction
@@ -72,4 +73,4 @@ private:
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;

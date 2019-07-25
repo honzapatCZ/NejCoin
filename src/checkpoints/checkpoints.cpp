@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -38,8 +39,8 @@
 
 using namespace epee;
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "checkpoints"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "checkpoints"
 
 namespace cryptonote
 {
@@ -253,23 +254,23 @@ namespace cryptonote
   {
     std::vector<std::string> records;
 
-    // All four MoneroPulse domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.moneropulse.se"
-						     , "checkpoints.moneropulse.org"
-						     , "checkpoints.moneropulse.net"
-						     , "checkpoints.moneropulse.co"
+    // All four NejcoinPulse domains have DNSSEC on and valid
+    static const std::vector<std::string> dns_urls = { "checkpoints.nejcoinpulse.se"
+						     , "checkpoints.nejcoinpulse.org"
+						     , "checkpoints.nejcoinpulse.net"
+						     , "checkpoints.nejcoinpulse.co"
     };
 
-    static const std::vector<std::string> testnet_dns_urls = { "testpoints.moneropulse.se"
-							     , "testpoints.moneropulse.org"
-							     , "testpoints.moneropulse.net"
-							     , "testpoints.moneropulse.co"
+    static const std::vector<std::string> testnet_dns_urls = { "testpoints.nejcoinpulse.se"
+							     , "testpoints.nejcoinpulse.org"
+							     , "testpoints.nejcoinpulse.net"
+							     , "testpoints.nejcoinpulse.co"
     };
 
-    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.moneropulse.se"
-                   , "stagenetpoints.moneropulse.org"
-                   , "stagenetpoints.moneropulse.net"
-                   , "stagenetpoints.moneropulse.co"
+    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.nejcoinpulse.se"
+                   , "stagenetpoints.nejcoinpulse.org"
+                   , "stagenetpoints.nejcoinpulse.net"
+                   , "stagenetpoints.nejcoinpulse.co"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, nettype == TESTNET ? testnet_dns_urls : nettype == STAGENET ? stagenet_dns_urls : dns_urls))

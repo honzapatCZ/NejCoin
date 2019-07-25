@@ -1,3 +1,4 @@
+//Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -102,7 +103,7 @@ namespace tools
       {
         //std::list<std::string> txs_as_json;
         uint64_t total_received;
-        uint64_t total_received_unlocked = 0; // OpenMonero only
+        uint64_t total_received_unlocked = 0; // OpenNejcoin only
         uint64_t scanned_height;
         std::vector<transaction> transactions;
         uint64_t blockchain_height;
@@ -187,7 +188,7 @@ namespace tools
         std::string amount;
         std::string address;
         std::string view_key;
-        // OpenMonero specific
+        // OpenNejcoin specific
         uint64_t mixin;
         bool use_dust;
         std::string dust_threshold;

@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -56,8 +57,8 @@
 #include "cryptonote_basic/cryptonote_boost_serialization.h"
 #include "misc_language.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "tests.core"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "tests.core"
 
 
 

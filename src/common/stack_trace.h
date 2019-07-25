@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2016-2019, The Monero Project
 // 
 // All rights reserved.
@@ -26,8 +27,8 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#ifndef MONERO_EXCEPTION_H
-#define MONERO_EXCEPTION_H
+#ifndef NEJCOIN_EXCEPTION_H
+#define NEJCOIN_EXCEPTION_H
 
 #include <string>
 

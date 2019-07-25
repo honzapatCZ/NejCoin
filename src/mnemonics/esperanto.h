@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -1097,7 +1098,7 @@ namespace Language
       "mokadi",
       "molaro",
       "momento",
-      "monero",
+      "nejcoin",
       "mopso",
       "mordi",
       "moskito",

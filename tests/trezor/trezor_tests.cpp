@@ -1,3 +1,4 @@
+//Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -138,7 +139,7 @@ int main(int argc, char* argv[])
     // Bootstrapping common chain & accounts
     const uint8_t initial_hf =  (uint8_t)get_env_long("TEST_MIN_HF", 11);
     const uint8_t max_hf = (uint8_t)get_env_long("TEST_MAX_HF", 11);
-    MINFO("Test versions " << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")");
+    MINFO("Test versions " << NEJCOIN_RELEASE_NAME << "' (v" << NEJCOIN_VERSION_FULL << ")");
     MINFO("Testing hardforks [" << (int)initial_hf << ", " << (int)max_hf << "]");
 
     cryptonote::core core_obj(nullptr);
@@ -1844,26 +1845,26 @@ bool wallet_api_tests::generate(std::vector<test_event_entry>& events)
   init();
   test_setup(events);
   const std::string wallet_path = (m_wallet_dir / "wallet").string();
-  const auto api_net_type = m_network_type == TESTNET ? Monero::TESTNET : Monero::MAINNET;
+  const auto api_net_type = m_network_type == TESTNET ? Nejcoin::TESTNET : Nejcoin::MAINNET;
 
-  Monero::WalletManager *wmgr = Monero::WalletManagerFactory::getWalletManager();
-  std::unique_ptr<Monero::Wallet> w{wmgr->createWalletFromDevice(wallet_path, "", api_net_type, m_trezor_path, 1)};
+  Nejcoin::WalletManager *wmgr = Nejcoin::WalletManagerFactory::getWalletManager();
+  std::unique_ptr<Nejcoin::Wallet> w{wmgr->createWalletFromDevice(wallet_path, "", api_net_type, m_trezor_path, 1)};
   CHECK_AND_ASSERT_THROW_MES(w->init(daemon()->rpc_addr(), 0), "Wallet init fail");
   CHECK_AND_ASSERT_THROW_MES(w->refresh(), "Refresh fail");
   uint64_t balance = w->balance(0);
   MDEBUG("Balance: " << balance);
-  CHECK_AND_ASSERT_THROW_MES(w->status() == Monero::PendingTransaction::Status_Ok, "Status nok");
+  CHECK_AND_ASSERT_THROW_MES(w->status() == Nejcoin::PendingTransaction::Status_Ok, "Status nok");
 
   auto addr = get_address(m_eve_account);
   auto recepient_address = cryptonote::get_account_address_as_str(m_network_type, false, addr);
-  Monero::PendingTransaction * transaction = w->createTransaction(recepient_address,
+  Nejcoin::PendingTransaction * transaction = w->createTransaction(recepient_address,
                                                                   "",
                                                                   MK_COINS(10),
                                                                   TREZOR_TEST_MIXIN,
-                                                                  Monero::PendingTransaction::Priority_Medium,
+                                                                  Nejcoin::PendingTransaction::Priority_Medium,
                                                                   0,
                                                                   std::set<uint32_t>{});
-  CHECK_AND_ASSERT_THROW_MES(transaction->status() == Monero::PendingTransaction::Status_Ok, "Status nok");
+  CHECK_AND_ASSERT_THROW_MES(transaction->status() == Nejcoin::PendingTransaction::Status_Ok, "Status nok");
   w->refresh();
 
   CHECK_AND_ASSERT_THROW_MES(w->balance(0) == balance, "Err");

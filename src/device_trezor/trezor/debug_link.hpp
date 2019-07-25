@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft
 // Copyright (c) 2017-2018, The Monero Project
 //
 // All rights reserved.
@@ -27,8 +28,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#ifndef MONERO_DEBUG_LINK_H
-#define MONERO_DEBUG_LINK_H
+#ifndef NEJCOIN_DEBUG_LINK_H
+#define NEJCOIN_DEBUG_LINK_H
 
 #include "transport.hpp"
 #include "messages/messages-debug.pb.h"
@@ -90,4 +91,4 @@ namespace trezor {
 }
 }
 
-#endif //MONERO_DEBUG_LINK_H
+#endif //NEJCOIN_DEBUG_LINK_H

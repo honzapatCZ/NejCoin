@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2018, The Monero Project
 // 
 // All rights reserved.
@@ -33,8 +34,8 @@
 #include "spawn.h"
 #include "notify.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "notify"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "notify"
 
 namespace tools
 {

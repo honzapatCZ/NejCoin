@@ -1,3 +1,4 @@
+# Copyright (c) 2019-2019, Nejcraft 
 # Copyright (c) 2014-2019, The Monero Project
 #
 # All rights reserved.
@@ -44,9 +45,9 @@ set(checkpoints_headers)
 set(checkpoints_private_headers
   checkpoints.h)
 
-monero_private_headers(checkpoints
+nejcoin_private_headers(checkpoints
   ${checkpoints_private_headers})
-monero_add_library(checkpoints
+nejcoin_add_library(checkpoints
   ${checkpoints_sources}
   ${checkpoints_headers}
   ${checkpoints_private_headers})

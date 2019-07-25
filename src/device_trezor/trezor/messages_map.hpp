@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2017-2019, The Monero Project
 //
 // All rights reserved.
@@ -27,8 +28,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#ifndef MONERO_MESSAGES_MAP_H
-#define MONERO_MESSAGES_MAP_H
+#ifndef NEJCOIN_MESSAGES_MAP_H
+#define NEJCOIN_MESSAGES_MAP_H
 
 #include <string>
 #include <type_traits>
@@ -91,4 +92,4 @@ namespace trezor {
 
 }}
 
-#endif //MONERO_MESSAGES_MAP_H
+#endif //NEJCOIN_MESSAGES_MAP_H

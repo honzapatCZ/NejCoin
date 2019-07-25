@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -37,7 +38,7 @@
 
 #include <vector>
 
-namespace Monero {
+namespace Nejcoin {
   
 AddressBook::~AddressBook() {}
   
@@ -178,4 +179,4 @@ AddressBookImpl::~AddressBookImpl()
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;

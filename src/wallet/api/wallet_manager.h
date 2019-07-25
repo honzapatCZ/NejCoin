@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -33,7 +34,7 @@
 #include "net/http_client.h"
 #include <string>
 
-namespace Monero {
+namespace Nejcoin {
 
 class WalletManagerImpl : public WalletManager
 {
@@ -101,4 +102,4 @@ private:
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;

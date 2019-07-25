@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -36,8 +37,8 @@
 #include "crypto/hash.h"
 #include "wallet_rpc_server_error_codes.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "wallet.rpc"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "wallet.rpc"
 
 // When making *any* change here, bump minor
 // If the change is incompatible, then bump major and set minor to 0

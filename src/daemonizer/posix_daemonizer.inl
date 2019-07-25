@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -100,7 +101,7 @@ namespace daemonizer
     }
     else
     {
-      //LOG_PRINT_L0("Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL);
+      //LOG_PRINT_L0("Nejcoin '" << NEJCOIN_RELEASE_NAME << "' (v" << NEJCOIN_VERSION_FULL);
       return executor.run_interactive(vm);
     }
   }

@@ -1,3 +1,4 @@
+//Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2018, The Monero Project
 // All rights reserved.
 //
@@ -30,7 +31,7 @@
 #include <type_traits>
 
 //! Executes a LMDB command, and returns errors via `lmdb::error` enum.
-#define MONERO_LMDB_CHECK(...)         \
+#define NEJCOIN_LMDB_CHECK(...)         \
     do                                 \
     {                                  \
         const int err = __VA_ARGS__ ;  \

@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -31,7 +32,7 @@
 #include "wallet/api/wallet2_api.h"
 #include <boost/thread/shared_mutex.hpp>
 
-namespace Monero {
+namespace Nejcoin {
 
 class WalletImpl;
 
@@ -56,5 +57,5 @@ private:
 
 }
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;
 

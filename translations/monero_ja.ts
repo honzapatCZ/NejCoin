@@ -2,7 +2,7 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ja" sourcelanguage="en">
 <context>
-    <name>Monero::AddressBookImpl</name>
+    <name>Nejcoin::AddressBookImpl</name>
     <message>
         <location filename="../src/wallet/api/address_book.cpp" line="53"/>
         <source>Invalid destination address</source>
@@ -25,7 +25,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::PendingTransactionImpl</name>
+    <name>Nejcoin::PendingTransactionImpl</name>
     <message>
         <location filename="../src/wallet/api/pending_transaction.cpp" line="91"/>
         <source>Attempting to save transaction to file, but specified file(s) exist. Exiting to not risk overwriting. File:</source>
@@ -78,7 +78,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::UnsignedTransactionImpl</name>
+    <name>Nejcoin::UnsignedTransactionImpl</name>
     <message>
         <location filename="../src/wallet/api/unsigned_transaction.cpp" line="75"/>
         <source>This is a watch only wallet</source>
@@ -132,7 +132,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::WalletImpl</name>
+    <name>Nejcoin::WalletImpl</name>
     <message>
         <location filename="../src/wallet/api/wallet.cpp" line="1459"/>
         <source>payment id has invalid format, expected 16 or 64 character hex string: </source>
@@ -182,7 +182,7 @@
         <location filename="../src/wallet/api/wallet.cpp" line="1520"/>
         <location filename="../src/wallet/api/wallet.cpp" line="1603"/>
         <source>not enough money to transfer, available only %s, sent amount %s</source>
-        <translation>振替でMoneroを受け取ることできません。利用可能な金額： %s,  取引の金額： %s</translation>
+        <translation>振替でNejcoinを受け取ることできません。利用可能な金額： %s,  取引の金額： %s</translation>
     </message>
     <message>
         <location filename="../src/wallet/api/wallet.cpp" line="589"/>
@@ -345,7 +345,7 @@
         <location filename="../src/wallet/api/wallet.cpp" line="1527"/>
         <location filename="../src/wallet/api/wallet.cpp" line="1611"/>
         <source>not enough money to transfer, overall balance only %s, sent amount %s</source>
-        <translation>振替でMoneroを受け取ることできません。利用可能な金額： %s,  取引の金額： %s</translation>
+        <translation>振替でNejcoinを受け取ることできません。利用可能な金額： %s,  取引の金額： %s</translation>
     </message>
     <message>
         <location filename="../src/wallet/api/wallet.cpp" line="1534"/>
@@ -1491,17 +1491,17 @@ This transaction will unlock on block %llu, in approximately %s days (assuming 2
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2145"/>
-        <source>Welcome to Monero, the private cryptocurrency.</source>
+        <source>Welcome to Nejcoin, the private cryptocurrency.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2147"/>
-        <source>Monero, like Bitcoin, is a cryptocurrency. That is, it is digital money.</source>
+        <source>Nejcoin, like Bitcoin, is a cryptocurrency. That is, it is digital money.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2148"/>
-        <source>Unlike Bitcoin, your Monero transactions and balance stay private, and not visible to the world by default.</source>
+        <source>Unlike Bitcoin, your Nejcoin transactions and balance stay private, and not visible to the world by default.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1511,32 +1511,32 @@ This transaction will unlock on block %llu, in approximately %s days (assuming 2
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2151"/>
-        <source>Monero protects your privacy on the blockchain, and while Monero strives to improve all the time,</source>
+        <source>Nejcoin protects your privacy on the blockchain, and while Nejcoin strives to improve all the time,</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2152"/>
-        <source>no privacy technology can be 100% perfect, Monero included.</source>
+        <source>no privacy technology can be 100% perfect, Nejcoin included.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2153"/>
-        <source>Monero cannot protect you from malware, and it may not be as effective as we hope against powerful adversaries.</source>
+        <source>Nejcoin cannot protect you from malware, and it may not be as effective as we hope against powerful adversaries.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2154"/>
-        <source>Flaws in Monero may be discovered in the future, and attacks may be developed to peek under some</source>
+        <source>Flaws in Nejcoin may be discovered in the future, and attacks may be developed to peek under some</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2155"/>
-        <source>of the layers of privacy Monero provides. Be safe and practice defense in depth.</source>
+        <source>of the layers of privacy Nejcoin provides. Be safe and practice defense in depth.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2157"/>
-        <source>Welcome to Monero and financial privacy. For more information, see https://getmonero.org/</source>
+        <source>Welcome to Nejcoin and financial privacy. For more information, see https://getnejcoin.org/</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1627,7 +1627,7 @@ Amount, Spent(&quot;T&quot;|&quot;F&quot;), &quot;frozen&quot;|&quot;locked&quot
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="2797"/>
-        <source>Donate &lt;amount&gt; to the development team (donate.getmonero.org).</source>
+        <source>Donate &lt;amount&gt; to the development team (donate.getnejcoin.org).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1714,8 +1714,8 @@ If the &quot;tag_description&quot; argument is specified, the tag &lt;tag_name&g
  ask-password &lt;0|1|2   (or never|action|decrypt)&gt;
    action: ask the password before many actions such as transfer, etc
    decrypt: same as action, but keeps the spend key encrypted in memory when not needed
- unit &lt;monero|millinero|micronero|nanonero|piconero&gt;
-   Set the default monero (sub-)unit.
+ unit &lt;nejcoin|millinero|micronero|nanonero|piconero&gt;
+   Set the default nejcoin (sub-)unit.
  min-outputs-count [n]
    Try to keep at least that many outputs of value at least min-outputs-value.
  min-outputs-value [n]
@@ -1731,12 +1731,12 @@ If the &quot;tag_description&quot; argument is specified, the tag &lt;tag_name&g
  auto-low-priority &lt;1|0&gt;
    Whether to automatically use the low priority fee level when it&apos;s safe to do so.
  segregate-pre-fork-outputs &lt;1|0&gt;
-   Set this if you intend to spend outputs on both Monero AND a key reusing fork.
+   Set this if you intend to spend outputs on both Nejcoin AND a key reusing fork.
  key-reuse-mitigation2 &lt;1|0&gt;
-   Set this if you are not sure whether you will spend on a key reusing Monero fork later.
+   Set this if you are not sure whether you will spend on a key reusing Nejcoin fork later.
 subaddress-lookahead &lt;major&gt;:&lt;minor&gt;
    Set the lookahead sizes for the subaddress hash table.
-   Set this if you are not sure whether you will spend on a key reusing Monero fork later.
+   Set this if you are not sure whether you will spend on a key reusing Nejcoin fork later.
  segregation-height &lt;n&gt;
    Set to the height of a key reusing fork you want to use, 0 to use default.</source>
         <translation type="unfinished"></translation>
@@ -1940,7 +1940,7 @@ Otherwise, you prove the reserve of the smallest possible amount above &lt;amoun
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="3196"/>
-        <source>Prints basic info about Monero for first time users</source>
+        <source>Prints basic info about Nejcoin for first time users</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1950,7 +1950,7 @@ Otherwise, you prove the reserve of the smallest possible amount above &lt;amoun
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="3258"/>
-        <source> (set this to support the network and to get a chance to receive new monero)</source>
+        <source> (set this to support the network and to get a chance to receive new nejcoin)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2046,7 +2046,7 @@ Otherwise, you prove the reserve of the smallest possible amount above &lt;amoun
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="4093"/>
-        <source>If you are new to Monero, type &quot;welcome&quot; for a brief overview.</source>
+        <source>If you are new to Nejcoin, type &quot;welcome&quot; for a brief overview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2075,7 +2075,7 @@ Otherwise, you prove the reserve of the smallest possible amount above &lt;amoun
 To start synchronizing with the daemon, use the &quot;refresh&quot; command.
 Use the &quot;help&quot; command to see the list of available commands.
 Use &quot;help &lt;command&gt;&quot; to see a command&apos;s documentation.
-Always use the &quot;exit&quot; command when closing monero-wallet-cli to save 
+Always use the &quot;exit&quot; command when closing nejcoin-wallet-cli to save 
 your current session&apos;s state. Otherwise, you might need to synchronize 
 your wallet again (your wallet keys are NOT at risk in any case).
 </source>
@@ -2121,7 +2121,7 @@ your wallet again (your wallet keys are NOT at risk in any case).
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="4683"/>
-        <source>Background mining enabled. Thank you for supporting the Monero network.</source>
+        <source>Background mining enabled. Thank you for supporting the Nejcoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2147,7 +2147,7 @@ your wallet again (your wallet keys are NOT at risk in any case).
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="4752"/>
-        <source>Enabling this supports the network you are using, and makes you eligible for receiving new monero</source>
+        <source>Enabling this supports the network you are using, and makes you eligible for receiving new nejcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2421,7 +2421,7 @@ Warning: Some input keys being spent are from </source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="6830"/>
-        <source>Donating %s %s to The Monero Project (donate.getmonero.org or %s).</source>
+        <source>Donating %s %s to NejCoin (donate.getnejcoin.org or %s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3045,7 +3045,7 @@ Get help about a subcommand with: help mms &lt;subcommand&gt;, or mms help &lt;s
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="3083"/>
-        <source>Set or modify authorized signer info (single-word label, transport address, Monero address), or list all signers</source>
+        <source>Set or modify authorized signer info (single-word label, transport address, Nejcoin address), or list all signers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3182,7 +3182,7 @@ Key Image, &quot;absolute&quot;, list of rings</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="3301"/>
-        <source>monero, millinero, micronero, nanonero, piconero</source>
+        <source>nejcoin, millinero, micronero, nanonero, piconero</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3787,7 +3787,7 @@ Input %llu/%llu (%s): amount=%s</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="9565"/>
-        <source>Monero Address</source>
+        <source>Nejcoin Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3894,17 +3894,17 @@ Input %llu/%llu (%s): amount=%s</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="9771"/>
-        <source>mms signer [&lt;number&gt; &lt;label&gt; [&lt;transport_address&gt; [&lt;monero_address&gt;]]]</source>
+        <source>mms signer [&lt;number&gt; &lt;label&gt; [&lt;transport_address&gt; [&lt;nejcoin_address&gt;]]]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="9790"/>
-        <source>Invalid Monero address</source>
+        <source>Invalid Nejcoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="9797"/>
-        <source>Wallet state does not allow changing Monero addresses anymore</source>
+        <source>Wallet state does not allow changing Nejcoin addresses anymore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5062,7 +5062,7 @@ Use &quot;mms note&quot; to display the waiting notes</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="447"/>
-        <source> Monero Address = </source>
+        <source> Nejcoin Address = </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5208,9 +5208,9 @@ Use &quot;mms note&quot; to display the waiting notes</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="9382"/>
-        <source>This is the command line monero wallet. It needs to connect to a monero
+        <source>This is the command line nejcoin wallet. It needs to connect to a nejcoin
 daemon to work correctly.
-WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
+WARNING: Do not reuse your Nejcoin keys on another fork, UNLESS this fork has key reuse mitigations built in. Doing so will harm your privacy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5230,7 +5230,7 @@ WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="150"/>
-        <source>The newly created transaction will not be relayed to the monero network</source>
+        <source>The newly created transaction will not be relayed to the nejcoin network</source>
         <translation>新しい取引をネットワークに中継しません</translation>
     </message>
     <message>
@@ -5563,12 +5563,12 @@ WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key
     </message>
     <message>
         <location filename="../src/wallet/wallet2.cpp" line="1625"/>
-        <source>Password is needed to compute key image for incoming monero</source>
+        <source>Password is needed to compute key image for incoming nejcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/wallet/wallet2.cpp" line="1626"/>
-        <source>Invalid password: password is needed to compute key image for incoming monero</source>
+        <source>Invalid password: password is needed to compute key image for incoming nejcoin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5676,10 +5676,10 @@ WARNING: Do not reuse your Monero keys on another fork, UNLESS this fork has key
     </message>
     <message>
         <location filename="../src/wallet/wallet_rpc_server.cpp" line="4409"/>
-        <source>This is the RPC monero wallet. It needs to connect to a monero
+        <source>This is the RPC nejcoin wallet. It needs to connect to a nejcoin
 daemon to work correctly.</source>
-        <translation>これはMoneroのRPCウォレットです。正しく動作させるには
-Moneroデーモンに接続する必要があります。</translation>
+        <translation>これはNejcoinのRPCウォレットです。正しく動作させるには
+Nejcoinデーモンに接続する必要があります。</translation>
     </message>
     <message>
         <location filename="../src/wallet/wallet_rpc_server.cpp" line="4245"/>
@@ -5790,10 +5790,10 @@ Moneroデーモンに接続する必要があります。</translation>
     </message>
     <message>
         <location filename="../src/wallet/wallet_args.cpp" line="144"/>
-        <source>This is the command line monero wallet. It needs to connect to a monero
+        <source>This is the command line nejcoin wallet. It needs to connect to a nejcoin
 daemon to work correctly.</source>
-        <translation>これはMoneroのコマンドラインウォレットです。正しく動作させるには
-Moneroデーモンに接続する必要があります。</translation>
+        <translation>これはNejcoinのコマンドラインウォレットです。正しく動作させるには
+Nejcoinデーモンに接続する必要があります。</translation>
     </message>
     <message>
         <location filename="../src/wallet/wallet_args.cpp" line="169"/>

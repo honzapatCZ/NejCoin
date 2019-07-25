@@ -34,20 +34,20 @@ try:
 except:
   tests = DEFAULT_TESTS
 
-N_MONERODS = 1
+N_NEJCOINDS = 1
 N_WALLETS = 4
 
-monerod_base = [builddir + "/bin/monerod", "--regtest", "--fixed-difficulty", "1", "--offline", "--no-igd", "--p2p-bind-port", "monerod_p2p_port", "--rpc-bind-port", "monerod_rpc_port", "--zmq-rpc-bind-port", "monerod_zmq_port", "--non-interactive", "--disable-dns-checkpoints", "--check-updates", "disabled", "--rpc-ssl", "disabled", "--log-level", "1"]
-wallet_base = [builddir + "/bin/monero-wallet-rpc", "--wallet-dir", builddir + "/functional-tests-directory", "--rpc-bind-port", "wallet_port", "--disable-rpc-login", "--rpc-ssl", "disabled", "--daemon-ssl", "disabled", "--daemon-port", "18180", "--log-level", "1"]
+nejcoind_base = [builddir + "/bin/nejcoind", "--regtest", "--fixed-difficulty", "1", "--offline", "--no-igd", "--p2p-bind-port", "nejcoind_p2p_port", "--rpc-bind-port", "nejcoind_rpc_port", "--zmq-rpc-bind-port", "nejcoind_zmq_port", "--non-interactive", "--disable-dns-checkpoints", "--check-updates", "disabled", "--rpc-ssl", "disabled", "--log-level", "1"]
+wallet_base = [builddir + "/bin/nejcoin-wallet-rpc", "--wallet-dir", builddir + "/functional-tests-directory", "--rpc-bind-port", "wallet_port", "--disable-rpc-login", "--rpc-ssl", "disabled", "--daemon-ssl", "disabled", "--daemon-port", "18180", "--log-level", "1"]
 
 command_lines = []
 processes = []
 outputs = []
 ports = []
 
-for i in range(N_MONERODS):
-  command_lines.append([str(18180+i) if x == "monerod_rpc_port" else str(18280+i) if x == "monerod_p2p_port" else str(18380+i) if x == "monerod_zmq_port" else x for x in monerod_base])
-  outputs.append(open(builddir + '/tests/functional_tests/monerod' + str(i) + '.log', 'a+'))
+for i in range(N_NEJCOINDS):
+  command_lines.append([str(18180+i) if x == "nejcoind_rpc_port" else str(18280+i) if x == "nejcoind_p2p_port" else str(18380+i) if x == "nejcoind_zmq_port" else x for x in nejcoind_base])
+  outputs.append(open(builddir + '/tests/functional_tests/nejcoind' + str(i) + '.log', 'a+'))
   ports.append(18180+i)
 
 for i in range(N_WALLETS):

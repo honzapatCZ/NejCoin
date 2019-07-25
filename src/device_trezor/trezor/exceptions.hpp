@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2017-2019, The Monero Project
 //
 // All rights reserved.
@@ -27,8 +28,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#ifndef MONERO_EXCEPTIONS_H
-#define MONERO_EXCEPTIONS_H
+#ifndef NEJCOIN_EXCEPTIONS_H
+#define NEJCOIN_EXCEPTIONS_H
 
 #include <exception>
 #include <string>
@@ -190,4 +191,4 @@ namespace proto {
 }
 }
 }
-#endif //MONERO_EXCEPTIONS_H
+#endif //NEJCOIN_EXCEPTIONS_H

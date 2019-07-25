@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -40,7 +41,7 @@
 #include <boost/thread/condition_variable.hpp>
 
 
-namespace Monero {
+namespace Nejcoin {
 class TransactionHistoryImpl;
 class PendingTransactionImpl;
 class UnsignedTransactionImpl;
@@ -267,7 +268,7 @@ private:
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;
 
 #endif
 

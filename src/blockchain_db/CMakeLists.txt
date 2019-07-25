@@ -1,3 +1,4 @@
+# Copyright (c) 2019-2019, Nejcraft 
 # Copyright (c) 2014-2019, The Monero Project
 #
 # All rights reserved.
@@ -53,9 +54,9 @@ if (BERKELEY_DB)
   )
 endif()
 
-monero_private_headers(blockchain_db
+nejcoin_private_headers(blockchain_db
   ${crypto_private_headers})
-monero_add_library(blockchain_db
+nejcoin_add_library(blockchain_db
   ${blockchain_db_sources}
   ${blockchain_db_headers}
   ${blockchain_db_private_headers})

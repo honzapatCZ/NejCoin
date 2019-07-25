@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -32,7 +33,7 @@
 #include <string>
 #include <ctime>
 
-namespace Monero {
+namespace Nejcoin {
 
 class TransactionHistoryImpl;
 
@@ -84,4 +85,4 @@ private:
 
 } // namespace
 
-namespace Bitmonero = Monero;
+namespace Bitnejcoin = Nejcoin;

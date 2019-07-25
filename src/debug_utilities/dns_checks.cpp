@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2019, The Monero Project
 //
 // All rights reserved.
@@ -37,8 +38,8 @@
 #include "common/dns_utils.h"
 #include "version.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "debugtools.dnschecks"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "debugtools.dnschecks"
 
 namespace po = boost::program_options;
 
@@ -121,28 +122,28 @@ int main(int argc, char* argv[])
 
   if (command_line::get_arg(vm, command_line::arg_help))
   {
-    std::cout << "Monero '" << MONERO_RELEASE_NAME << "' (v" << MONERO_VERSION_FULL << ")" << ENDL << ENDL;
+    std::cout << "Nejcoin '" << NEJCOIN_RELEASE_NAME << "' (v" << NEJCOIN_VERSION_FULL << ")" << ENDL << ENDL;
     std::cout << desc_options << std::endl;
     return 1;
   }
 
   mlog_configure("", true);
-  mlog_set_categories("+" MONERO_DEFAULT_LOG_CATEGORY ":INFO");
+  mlog_set_categories("+" NEJCOIN_DEFAULT_LOG_CATEGORY ":INFO");
 
-  lookup(LOOKUP_A, {"seeds.moneroseeds.se", "seeds.moneroseeds.ae.org", "seeds.moneroseeds.ch", "seeds.moneroseeds.li"});
+  lookup(LOOKUP_A, {"seeds.nejcoinseeds.se", "seeds.nejcoinseeds.ae.org", "seeds.nejcoinseeds.ch", "seeds.nejcoinseeds.li"});
 
-  lookup(LOOKUP_TXT, {"updates.moneropulse.org", "updates.moneropulse.net", "updates.moneropulse.co", "updates.moneropulse.se"});
+  lookup(LOOKUP_TXT, {"updates.nejcoinpulse.org", "updates.nejcoinpulse.net", "updates.nejcoinpulse.co", "updates.nejcoinpulse.se"});
 
-  lookup(LOOKUP_TXT, {"checkpoints.moneropulse.org", "checkpoints.moneropulse.net", "checkpoints.moneropulse.co", "checkpoints.moneropulse.se"});
+  lookup(LOOKUP_TXT, {"checkpoints.nejcoinpulse.org", "checkpoints.nejcoinpulse.net", "checkpoints.nejcoinpulse.co", "checkpoints.nejcoinpulse.se"});
 
   // those are in the code, but don't seem to actually exist
 #if 0
-  lookup(LOOKUP_TXT, {"testpoints.moneropulse.org", "testpoints.moneropulse.net", "testpoints.moneropulse.co", "testpoints.moneropulse.se");
+  lookup(LOOKUP_TXT, {"testpoints.nejcoinpulse.org", "testpoints.nejcoinpulse.net", "testpoints.nejcoinpulse.co", "testpoints.nejcoinpulse.se");
 
-  lookup(LOOKUP_TXT, {"stagenetpoints.moneropulse.org", "stagenetpoints.moneropulse.net", "stagenetpoints.moneropulse.co", "stagenetpoints.moneropulse.se"});
+  lookup(LOOKUP_TXT, {"stagenetpoints.nejcoinpulse.org", "stagenetpoints.nejcoinpulse.net", "stagenetpoints.nejcoinpulse.co", "stagenetpoints.nejcoinpulse.se"});
 #endif
 
-  lookup(LOOKUP_TXT, {"segheights.moneropulse.org", "segheights.moneropulse.net", "segheights.moneropulse.co", "segheights.moneropulse.se"});
+  lookup(LOOKUP_TXT, {"segheights.nejcoinpulse.org", "segheights.nejcoinpulse.net", "segheights.nejcoinpulse.co", "segheights.nejcoinpulse.se"});
 
   return 0;
   CATCH_ENTRY_L0("main", 1);

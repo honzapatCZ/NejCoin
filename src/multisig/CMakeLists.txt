@@ -1,3 +1,4 @@
+# Copyright (c) 2019-2019, Nejcraft 
 # Copyright (c) 2017-2019, The Monero Project
 #
 # All rights reserved.
@@ -34,10 +35,10 @@ set(multisig_headers)
 set(multisig_private_headers
   multisig.h)
 
-monero_private_headers(multisig
+nejcoin_private_headers(multisig
   ${multisig_private_headers})
 
-monero_add_library(multisig
+nejcoin_add_library(multisig
   ${multisig_sources}
   ${multisig_headers}
   ${multisig_private_headers})

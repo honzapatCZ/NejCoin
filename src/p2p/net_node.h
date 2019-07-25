@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 //
 // All rights reserved.
@@ -268,10 +269,10 @@ namespace nodetool
 
   private:
     const std::vector<std::string> m_seed_nodes_list =
-    { "seeds.moneroseeds.se"
-    , "seeds.moneroseeds.ae.org"
-    , "seeds.moneroseeds.ch"
-    , "seeds.moneroseeds.li"
+    { "seeds.nejcoinseeds.se"
+    , "seeds.nejcoinseeds.ae.org"
+    , "seeds.nejcoinseeds.ch"
+    , "seeds.nejcoinseeds.li"
     };
 
     bool islimitup=false;

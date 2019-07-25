@@ -6,6 +6,7 @@
 
 */
 
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -46,8 +47,8 @@
 #include "net/net_fwd.h"
 #include "rpc/core_rpc_server.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "daemon"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "daemon"
 
 namespace daemonize {
 

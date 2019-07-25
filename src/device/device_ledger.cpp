@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2017-2019, The Monero Project
 // 
 // All rights reserved.
@@ -43,8 +44,8 @@ namespace hw {
 
   #ifdef WITH_DEVICE_LEDGER
 
-    #undef MONERO_DEFAULT_LOG_CATEGORY
-    #define MONERO_DEFAULT_LOG_CATEGORY "device.ledger"
+    #undef NEJCOIN_DEFAULT_LOG_CATEGORY
+    #define NEJCOIN_DEFAULT_LOG_CATEGORY "device.ledger"
 
     /* ===================================================================== */
     /* ===                           Debug                              ==== */
@@ -320,8 +321,8 @@ namespace hw {
     bool device_ledger::reset() {
       reset_buffer();
       int offset = set_command_header_noopt(INS_RESET);
-      memmove(this->buffer_send+offset, MONERO_VERSION, strlen(MONERO_VERSION));
-      offset += strlen(MONERO_VERSION);
+      memmove(this->buffer_send+offset, NEJCOIN_VERSION, strlen(NEJCOIN_VERSION));
+      offset += strlen(NEJCOIN_VERSION);
       this->buffer_send[4] = offset-5;
       this->length_send = offset;
       this->exchange();

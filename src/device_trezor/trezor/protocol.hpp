@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2017-2019, The Monero Project
 //
 // All rights reserved.
@@ -27,8 +28,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#ifndef MONERO_PROTOCOL_H
-#define MONERO_PROTOCOL_H
+#ifndef NEJCOIN_PROTOCOL_H
+#define NEJCOIN_PROTOCOL_H
 
 #include "trezor_defs.hpp"
 #include "device/device_cold.hpp"
@@ -108,60 +109,60 @@ namespace chacha {
 // Cold Key image sync
 namespace ki {
 
-  using MoneroTransferDetails = messages::monero::MoneroKeyImageSyncStepRequest_MoneroTransferDetails;
-  using MoneroSubAddressIndicesList = messages::monero::MoneroKeyImageExportInitRequest_MoneroSubAddressIndicesList;
-  using MoneroExportedKeyImage = messages::monero::MoneroKeyImageSyncStepAck_MoneroExportedKeyImage;
+  using NejcoinTransferDetails = messages::nejcoin::NejcoinKeyImageSyncStepRequest_NejcoinTransferDetails;
+  using NejcoinSubAddressIndicesList = messages::nejcoin::NejcoinKeyImageExportInitRequest_NejcoinSubAddressIndicesList;
+  using NejcoinExportedKeyImage = messages::nejcoin::NejcoinKeyImageSyncStepAck_NejcoinExportedKeyImage;
   using exported_key_image = hw::device_cold::exported_key_image;
 
   /**
-   * Converts transfer details to the MoneroTransferDetails required for KI sync
+   * Converts transfer details to the NejcoinTransferDetails required for KI sync
    */
   bool key_image_data(wallet_shim * wallet,
                       const std::vector<tools::wallet2::transfer_details> & transfers,
-                      std::vector<MoneroTransferDetails> & res);
+                      std::vector<NejcoinTransferDetails> & res);
 
   /**
-   * Computes a hash over MoneroTransferDetails. Commitment used in the KI sync.
+   * Computes a hash over NejcoinTransferDetails. Commitment used in the KI sync.
    */
-  std::string compute_hash(const MoneroTransferDetails & rr);
+  std::string compute_hash(const NejcoinTransferDetails & rr);
 
   /**
    * Generates KI sync request with commitments computed.
    */
-  void generate_commitment(std::vector<MoneroTransferDetails> & mtds,
+  void generate_commitment(std::vector<NejcoinTransferDetails> & mtds,
                            const std::vector<tools::wallet2::transfer_details> & transfers,
-                           std::shared_ptr<messages::monero::MoneroKeyImageExportInitRequest> & req);
+                           std::shared_ptr<messages::nejcoin::NejcoinKeyImageExportInitRequest> & req);
 
   /**
    * Processes Live refresh step response, parses KI, checks the signature
    */
   void live_refresh_ack(const ::crypto::secret_key & view_key_priv,
                         const ::crypto::public_key& out_key,
-                        const std::shared_ptr<messages::monero::MoneroLiveRefreshStepAck> & ack,
+                        const std::shared_ptr<messages::nejcoin::NejcoinLiveRefreshStepAck> & ack,
                         ::cryptonote::keypair& in_ephemeral,
                         ::crypto::key_image& ki);
 }
 
 // Cold transaction signing
 namespace tx {
-  using TsxData = messages::monero::MoneroTransactionInitRequest_MoneroTransactionData;
-  using MoneroTransactionDestinationEntry = messages::monero::MoneroTransactionDestinationEntry;
-  using MoneroAccountPublicAddress = messages::monero::MoneroTransactionDestinationEntry_MoneroAccountPublicAddress;
-  using MoneroTransactionSourceEntry = messages::monero::MoneroTransactionSourceEntry;
-  using MoneroMultisigKLRki = messages::monero::MoneroTransactionSourceEntry_MoneroMultisigKLRki;
-  using MoneroOutputEntry = messages::monero::MoneroTransactionSourceEntry_MoneroOutputEntry;
-  using MoneroRctKey = messages::monero::MoneroTransactionSourceEntry_MoneroOutputEntry_MoneroRctKeyPublic;
-  using MoneroRsigData = messages::monero::MoneroTransactionRsigData;
+  using TsxData = messages::nejcoin::NejcoinTransactionInitRequest_NejcoinTransactionData;
+  using NejcoinTransactionDestinationEntry = messages::nejcoin::NejcoinTransactionDestinationEntry;
+  using NejcoinAccountPublicAddress = messages::nejcoin::NejcoinTransactionDestinationEntry_NejcoinAccountPublicAddress;
+  using NejcoinTransactionSourceEntry = messages::nejcoin::NejcoinTransactionSourceEntry;
+  using NejcoinMultisigKLRki = messages::nejcoin::NejcoinTransactionSourceEntry_NejcoinMultisigKLRki;
+  using NejcoinOutputEntry = messages::nejcoin::NejcoinTransactionSourceEntry_NejcoinOutputEntry;
+  using NejcoinRctKey = messages::nejcoin::NejcoinTransactionSourceEntry_NejcoinOutputEntry_NejcoinRctKeyPublic;
+  using NejcoinRsigData = messages::nejcoin::NejcoinTransactionRsigData;
 
   using tx_construction_data = tools::wallet2::tx_construction_data;
   using unsigned_tx_set = tools::wallet2::unsigned_tx_set;
 
-  void translate_address(MoneroAccountPublicAddress * dst, const cryptonote::account_public_address * src);
-  void translate_dst_entry(MoneroTransactionDestinationEntry * dst, const cryptonote::tx_destination_entry * src);
-  void translate_src_entry(MoneroTransactionSourceEntry * dst, const cryptonote::tx_source_entry * src);
-  void translate_klrki(MoneroMultisigKLRki * dst, const rct::multisig_kLRki * src);
-  void translate_rct_key(MoneroRctKey * dst, const rct::ctkey * src);
-  std::string hash_addr(const MoneroAccountPublicAddress * addr, boost::optional<uint64_t> amount = boost::none, boost::optional<bool> is_subaddr = boost::none);
+  void translate_address(NejcoinAccountPublicAddress * dst, const cryptonote::account_public_address * src);
+  void translate_dst_entry(NejcoinTransactionDestinationEntry * dst, const cryptonote::tx_destination_entry * src);
+  void translate_src_entry(NejcoinTransactionSourceEntry * dst, const cryptonote::tx_source_entry * src);
+  void translate_klrki(NejcoinMultisigKLRki * dst, const rct::multisig_kLRki * src);
+  void translate_rct_key(NejcoinRctKey * dst, const rct::ctkey * src);
+  std::string hash_addr(const NejcoinAccountPublicAddress * addr, boost::optional<uint64_t> amount = boost::none, boost::optional<bool> is_subaddr = boost::none);
   std::string hash_addr(const std::string & spend_key, const std::string & view_key, boost::optional<uint64_t> amount = boost::none, boost::optional<bool> is_subaddr = boost::none);
   std::string hash_addr(const ::crypto::public_key * spend_key, const ::crypto::public_key * view_key, boost::optional<uint64_t> amount = boost::none, boost::optional<bool> is_subaddr = boost::none);
   ::crypto::secret_key compute_enc_key(const ::crypto::secret_key & private_view_key, const std::string & aux, const std::string & salt);
@@ -179,7 +180,7 @@ namespace tx {
     unsigned rsig_type;
     int bp_version;
     std::vector<uint64_t> grouping_vct;
-    std::shared_ptr<MoneroRsigData> rsig_param;
+    std::shared_ptr<NejcoinRsigData> rsig_param;
     size_t cur_input_idx;
     size_t cur_output_idx;
     size_t cur_batch_idx;
@@ -229,42 +230,42 @@ namespace tx {
     void extract_payment_id();
     void compute_integrated_indices(TsxData * tsx_data);
     bool should_compute_bp_now() const;
-    void compute_bproof(messages::monero::MoneroTransactionRsigData & rsig_data);
+    void compute_bproof(messages::nejcoin::NejcoinTransactionRsigData & rsig_data);
     void process_bproof(rct::Bulletproof & bproof);
 
   public:
     Signer(wallet_shim * wallet2, const unsigned_tx_set * unsigned_tx, size_t tx_idx = 0, hw::tx_aux_data * aux_data = nullptr);
 
-    std::shared_ptr<messages::monero::MoneroTransactionInitRequest> step_init();
-    void step_init_ack(std::shared_ptr<const messages::monero::MoneroTransactionInitAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionInitRequest> step_init();
+    void step_init_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionInitAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionSetInputRequest> step_set_input(size_t idx);
-    void step_set_input_ack(std::shared_ptr<const messages::monero::MoneroTransactionSetInputAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionSetInputRequest> step_set_input(size_t idx);
+    void step_set_input_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionSetInputAck> ack);
 
     void sort_ki();
-    std::shared_ptr<messages::monero::MoneroTransactionInputsPermutationRequest> step_permutation();
-    void step_permutation_ack(std::shared_ptr<const messages::monero::MoneroTransactionInputsPermutationAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionInputsPermutationRequest> step_permutation();
+    void step_permutation_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionInputsPermutationAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionInputViniRequest> step_set_vini_input(size_t idx);
-    void step_set_vini_input_ack(std::shared_ptr<const messages::monero::MoneroTransactionInputViniAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionInputViniRequest> step_set_vini_input(size_t idx);
+    void step_set_vini_input_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionInputViniAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionAllInputsSetRequest> step_all_inputs_set();
-    void step_all_inputs_set_ack(std::shared_ptr<const messages::monero::MoneroTransactionAllInputsSetAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionAllInputsSetRequest> step_all_inputs_set();
+    void step_all_inputs_set_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionAllInputsSetAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionSetOutputRequest> step_set_output(size_t idx);
-    void step_set_output_ack(std::shared_ptr<const messages::monero::MoneroTransactionSetOutputAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionSetOutputRequest> step_set_output(size_t idx);
+    void step_set_output_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionSetOutputAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionSetOutputRequest> step_rsig(size_t idx);
-    void step_set_rsig_ack(std::shared_ptr<const messages::monero::MoneroTransactionSetOutputAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionSetOutputRequest> step_rsig(size_t idx);
+    void step_set_rsig_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionSetOutputAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionAllOutSetRequest> step_all_outs_set();
-    void step_all_outs_set_ack(std::shared_ptr<const messages::monero::MoneroTransactionAllOutSetAck> ack, hw::device &hwdev);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionAllOutSetRequest> step_all_outs_set();
+    void step_all_outs_set_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionAllOutSetAck> ack, hw::device &hwdev);
 
-    std::shared_ptr<messages::monero::MoneroTransactionSignInputRequest> step_sign_input(size_t idx);
-    void step_sign_input_ack(std::shared_ptr<const messages::monero::MoneroTransactionSignInputAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionSignInputRequest> step_sign_input(size_t idx);
+    void step_sign_input_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionSignInputAck> ack);
 
-    std::shared_ptr<messages::monero::MoneroTransactionFinalRequest> step_final();
-    void step_final_ack(std::shared_ptr<const messages::monero::MoneroTransactionFinalAck> ack);
+    std::shared_ptr<messages::nejcoin::NejcoinTransactionFinalRequest> step_final();
+    void step_final_ack(std::shared_ptr<const messages::nejcoin::NejcoinTransactionFinalAck> ack);
 
     std::string store_tx_aux_info();
 
@@ -312,14 +313,14 @@ namespace tx {
   // TX Key decryption
   void load_tx_key_data(hw::device_cold::tx_key_data_t & res, const std::string & data);
 
-  std::shared_ptr<messages::monero::MoneroGetTxKeyRequest> get_tx_key(
+  std::shared_ptr<messages::nejcoin::NejcoinGetTxKeyRequest> get_tx_key(
       const hw::device_cold::tx_key_data_t & tx_data);
 
   void get_tx_key_ack(
       std::vector<::crypto::secret_key> & tx_keys,
       const std::string & tx_prefix_hash,
       const ::crypto::secret_key & view_key_priv,
-      std::shared_ptr<const messages::monero::MoneroGetTxKeyAck> ack
+      std::shared_ptr<const messages::nejcoin::NejcoinGetTxKeyAck> ack
   );
 }
 
@@ -328,4 +329,4 @@ namespace tx {
 }
 
 
-#endif //MONERO_PROTOCOL_H
+#endif //NEJCOIN_PROTOCOL_H

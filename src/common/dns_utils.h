@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.
@@ -109,7 +110,7 @@ public:
    * @brief Gets a DNS address from OpenAlias format
    *
    * If the address looks good, but contains one @ symbol, replace that with a .
-   * e.g. donate@getmonero.org becomes donate.getmonero.org
+   * e.g. donate@getnejcoin.org becomes donate.getnejcoin.org
    *
    * @param oa_addr  OpenAlias address
    *

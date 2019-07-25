@@ -1,3 +1,4 @@
+# Copyright (c) 2019-2019, Nejcraft 
 # Copyright (c) 2014-2018, The Monero Project
 #
 # All rights reserved.

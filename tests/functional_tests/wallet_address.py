@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #encoding=utf-8
 
-# Copyright (c) 2019 The Monero Project
+# Copyright (c) 2019-2019, Nejcraft 
+# Copyright (c) 2019, The Monero Project
 # 
 # All rights reserved.
 # 

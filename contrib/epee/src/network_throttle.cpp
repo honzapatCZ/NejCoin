@@ -1,6 +1,6 @@
 /**
 @file
-@author rfree (current maintainer in monero.cc project)
+@author rfree (current maintainer in nejcoin.cc project)
 @brief interface for throttling of connection (count and rate-limit speed etc) 
 @details <PRE>
 
@@ -26,6 +26,7 @@ Throttling work by:
 
 */
 
+// Copyright (c) 2019-2019, Nejcraft 
 // Copyright (c) 2014-2019, The Monero Project
 // 
 // All rights reserved.

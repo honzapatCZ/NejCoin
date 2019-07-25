@@ -1,3 +1,4 @@
+// Copyright (c) 2019-2019, Nejcraft
 // Copyright (c) 2017, The Monero Project
 // 
 // All rights reserved.
@@ -38,8 +39,8 @@ extern "C"
 #include "rctOps.h"
 #include "multiexp.h"
 
-#undef MONERO_DEFAULT_LOG_CATEGORY
-#define MONERO_DEFAULT_LOG_CATEGORY "multiexp"
+#undef NEJCOIN_DEFAULT_LOG_CATEGORY
+#define NEJCOIN_DEFAULT_LOG_CATEGORY "multiexp"
 
 //#define MULTIEXP_PERF(x) x
 #define MULTIEXP_PERF(x)
