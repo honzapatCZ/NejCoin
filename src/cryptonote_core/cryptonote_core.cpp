@@ -66,8 +66,16 @@ DISABLE_VS_WARNINGS(4355)
 // basically at least how many bytes the block itself serializes to without the miner tx
 #define BLOCK_SIZE_SANITY_LEEWAY 100
 
+
+
+
 namespace cryptonote
 {
+  const command_line::arg_descriptor<bool, false> arg_gns_tx  = {
+    "print-genesis-tx"
+  , "checkpoints from DNS server will be enforced"
+  , false
+  };
   const command_line::arg_descriptor<bool, false> arg_testnet_on  = {
     "testnet"
   , "Run on testnet. The wallet must be launched with --testnet flag."
@@ -303,6 +311,7 @@ namespace cryptonote
   //-----------------------------------------------------------------------------------
   void core::init_options(boost::program_options::options_description& desc)
   {
+    command_line::add_arg(desc, arg_gns_tx);
     command_line::add_arg(desc, arg_data_dir);
 
     command_line::add_arg(desc, arg_test_drop_download);
@@ -363,13 +372,16 @@ namespace cryptonote
 
       set_checkpoints_file_path(checkpoint_json_hashfile_fullpath.string());
     }
-
-
+    
+    if (command_line::get_arg(vm, arg_gns_tx) == true)
+      own_gns_tx();
+    
     set_enforce_dns_checkpoints(command_line::get_arg(vm, arg_dns_checkpoints));
     test_drop_download_height(command_line::get_arg(vm, arg_test_drop_download_height));
     m_fluffy_blocks_enabled = !get_arg(vm, arg_no_fluffy_blocks);
     m_pad_transactions = get_arg(vm, arg_pad_transactions);
     m_offline = get_arg(vm, arg_offline);
+    
     m_disable_dns_checkpoints = get_arg(vm, arg_disable_dns_checkpoints);
     if (!command_line::is_arg_defaulted(vm, arg_fluffy_blocks))
       MWARNING(arg_fluffy_blocks.name << " is obsolete, it is now default");
@@ -718,6 +730,21 @@ namespace cryptonote
     m_blockchain_storage.deinit();
     return true;
   }
+  
+  //-----------------------------------------------------------------------------------------------
+  void core::own_gns_tx()
+  {
+      Logging::ConsoleLogger logger;
+      CryptoNote::Transaction tx = CryptoNote::CurrencyBuilder(logger).generateGenesisTransaction();
+      CryptoNote::BinaryArray txb = CryptoNote::toBinaryArray(tx);
+      std::string tx_hex = Common::toHex(txb);
+
+      std::cout << "Insert this line into your coin configuration file as is: " << std::endl;
+      std::cout << "const char GENESIS_COINBASE_TX_HEX[] = \"" << tx_hex << "\";" << std::endl;
+
+      return;
+  }
+  
   //-----------------------------------------------------------------------------------------------
   void core::test_drop_download()
   {

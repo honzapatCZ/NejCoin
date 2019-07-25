@@ -57,7 +57,8 @@ namespace cryptonote
      const std::pair<uint8_t, uint64_t> *hard_forks;
      const size_t long_term_block_weight_window;
    };
-
+  
+  extern const command_line::arg_descriptor<bool, false> arg_gns_tx;
   extern const command_line::arg_descriptor<std::string, false, true, 2> arg_data_dir;
   extern const command_line::arg_descriptor<bool, false> arg_testnet_on;
   extern const command_line::arg_descriptor<bool, false> arg_stagenet_on;
@@ -274,6 +275,10 @@ namespace cryptonote
       * @brief sets to drop blocks downloaded (for testing)
       */
      void test_drop_download();
+     /**
+      * @brief prints genesis block
+      */
+     void own_gns_tx();
 
      /**
       * @brief sets to drop blocks downloaded below a certain height
