@@ -58,7 +58,7 @@
 namespace po = boost::program_options;
 namespace bf = boost::filesystem;
 
-void print_genesis_tx_hex(uint8_t nettype) {
+void print_genesis_tx_hex(uint8_t nettype) {// by Marko A. on monero.stackexchange.com
 
     using namespace cryptonote;
 
