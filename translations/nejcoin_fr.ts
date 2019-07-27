@@ -4101,8 +4101,8 @@ Input %llu/%llu (%s): amount=%s</source>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="6830"/>
-        <source>Donating %s %s to NejCoin (donate.getnejcoin.org or %s).</source>
-        <translation>Don de %s %s à NejCoin (donate.getnejcoin.org ou %s).</translation>
+        <source>Donating %s %s to Nejcoin (donate.getnejcoin.org or %s).</source>
+        <translation>Don de %s %s à Nejcoin (donate.getnejcoin.org ou %s).</translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="7164"/>

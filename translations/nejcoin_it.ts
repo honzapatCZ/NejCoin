@@ -980,8 +980,8 @@ Questa transazione verrà sbloccata al blocco %llu, in approssimativamente %s gi
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="6830"/>
-        <source>Donating %s %s to NejCoin (donate.getnejcoin.org or %s).</source>
-        <translation>Donare %s %s a NejCoin (donate.getnejcoin.org o %s).</translation>
+        <source>Donating %s %s to Nejcoin (donate.getnejcoin.org or %s).</source>
+        <translation>Donare %s %s a Nejcoin (donate.getnejcoin.org o %s).</translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="6832"/>

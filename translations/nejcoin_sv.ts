@@ -2441,7 +2441,7 @@ Varning: Några ingångsnycklar som spenderas kommer från </translation>
     </message>
     <message>
         <location filename="../src/simplewallet/simplewallet.cpp" line="6830"/>
-        <source>Donating %s %s to NejCoin (donate.getnejcoin.org or %s).</source>
+        <source>Donating %s %s to Nejcoin (donate.getnejcoin.org or %s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

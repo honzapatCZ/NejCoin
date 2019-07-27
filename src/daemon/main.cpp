@@ -58,7 +58,7 @@
 namespace po = boost::program_options;
 namespace bf = boost::filesystem;
 
-void print_genesis_tx_hex(uint8_t nettype) {// by Marko A. on monero.stackexchange.com
+void print_genesis_tx_hex(uint8_t nettype) {// by Marko A. on nejcoin.stackexchange.com
 
     using namespace cryptonote;
 
@@ -226,13 +226,14 @@ int main(int argc, char const * argv[])
       return true;
     });
     if (!ok) return 1;
-/* //prints genesis
+ //prints genesis
+ /*
     if (command_line::get_arg(vm, command_line::arg_gns_tx))
     {
       print_genesis_tx_hex(0);
       return 0;
     }
-  */  
+   */
     if (command_line::get_arg(vm, command_line::arg_help))
     {
       std::cout << "Nejcoin '" << NEJCOIN_RELEASE_NAME << "' (v" << NEJCOIN_VERSION_FULL << ")" << ENDL << ENDL;
