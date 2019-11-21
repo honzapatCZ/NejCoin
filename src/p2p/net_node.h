@@ -269,7 +269,8 @@ namespace nodetool
 
   private:
     const std::vector<std::string> m_seed_nodes_list =
-    { "seeds.nejcoin.li"
+    { 
+        //"seeds.nejcoin.li"//Needs to be done
     };
 
     bool islimitup=false;
