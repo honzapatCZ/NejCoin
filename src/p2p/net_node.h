@@ -271,6 +271,7 @@ namespace nodetool
     const std::vector<std::string> m_seed_nodes_list =
     { 
         //"seeds.nejcoin.li"//Needs to be done
+        "pavpatr-nat.pilsfree.net"
     };
 
     bool islimitup=false;
