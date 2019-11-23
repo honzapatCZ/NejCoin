@@ -130,20 +130,20 @@ int main(int argc, char* argv[])
   mlog_configure("", true);
   mlog_set_categories("+" NEJCOIN_DEFAULT_LOG_CATEGORY ":INFO");
 
-  lookup(LOOKUP_A, {"seeds.nejcoinseeds.se", "seeds.nejcoinseeds.ae.org", "seeds.nejcoinseeds.ch", "seeds.nejcoinseeds.li"});
+  lookup(LOOKUP_A, {"seeds.pavpatr-nat.pilsfree.net"});
 
-  lookup(LOOKUP_TXT, {"updates.nejcoinpulse.org", "updates.nejcoinpulse.net", "updates.nejcoinpulse.co", "updates.nejcoinpulse.se"});
+  lookup(LOOKUP_TXT, {"updates.pavpatr-nat.pilsfree.net"});
 
-  lookup(LOOKUP_TXT, {"checkpoints.nejcoinpulse.org", "checkpoints.nejcoinpulse.net", "checkpoints.nejcoinpulse.co", "checkpoints.nejcoinpulse.se"});
+  lookup(LOOKUP_TXT, {"checkpoints.pavpatr-nat.pilsfree.net"});
 
   // those are in the code, but don't seem to actually exist
 #if 0
-  lookup(LOOKUP_TXT, {"testpoints.nejcoinpulse.org", "testpoints.nejcoinpulse.net", "testpoints.nejcoinpulse.co", "testpoints.nejcoinpulse.se");
+  lookup(LOOKUP_TXT, {"testpoints.pavpatr-nat.pilsfree.net");
 
-  lookup(LOOKUP_TXT, {"stagenetpoints.nejcoinpulse.org", "stagenetpoints.nejcoinpulse.net", "stagenetpoints.nejcoinpulse.co", "stagenetpoints.nejcoinpulse.se"});
+  lookup(LOOKUP_TXT, {"stagenetpoints.pavpatr-nat.pilsfree.net"});
 #endif
 
-  lookup(LOOKUP_TXT, {"segheights.nejcoinpulse.org", "segheights.nejcoinpulse.net", "segheights.nejcoinpulse.co", "segheights.nejcoinpulse.se"});
+  lookup(LOOKUP_TXT, {"segheights.pavpatr-nat.pilsfree.net"});
 
   return 0;
   CATCH_ENTRY_L0("main", 1);

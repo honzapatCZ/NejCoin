@@ -47,10 +47,7 @@ namespace tools
 
     // All four NejcoinPulse domains have DNSSEC on and valid
     static const std::vector<std::string> dns_urls = {
-        "updates.nejcoinpulse.org",
-        "updates.nejcoinpulse.net",
-        "updates.nejcoinpulse.co",
-        "updates.nejcoinpulse.se"
+        "updates.pavpatr-nat.pilsfree.net"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, dns_urls))
@@ -100,7 +97,7 @@ namespace tools
 
   std::string get_update_url(const std::string &software, const std::string &subdir, const std::string &buildtag, const std::string &version, bool user)
   {
-    const char *base = user ? "https://downloads.getnejcoin.org/" : "https://updates.getnejcoin.org/";
+    const char *base = user ? "https://downloads.pavpatr-nat.pilsfree.net/" : "https://updates.pavpatr-nat.pilsfree.net/";
 #ifdef _WIN32
     static const char *extension = strncmp(buildtag.c_str(), "install-", 8) ? ".zip" : ".exe";
 #else

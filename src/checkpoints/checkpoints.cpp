@@ -215,22 +215,13 @@ namespace cryptonote
     std::vector<std::string> records;
 
     // All four NejcoinPulse domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { "checkpoints.nejcoinpulse.se"
-						     , "checkpoints.nejcoinpulse.org"
-						     , "checkpoints.nejcoinpulse.net"
-						     , "checkpoints.nejcoinpulse.co"
+    static const std::vector<std::string> dns_urls = { "pavpatr-nat.pilsfree.net"
     };
 
-    static const std::vector<std::string> testnet_dns_urls = { "testpoints.nejcoinpulse.se"
-							     , "testpoints.nejcoinpulse.org"
-							     , "testpoints.nejcoinpulse.net"
-							     , "testpoints.nejcoinpulse.co"
+    static const std::vector<std::string> testnet_dns_urls = { "testpoints.pavpatr-nat.pilsfree.net"
     };
 
-    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.nejcoinpulse.se"
-                   , "stagenetpoints.nejcoinpulse.org"
-                   , "stagenetpoints.nejcoinpulse.net"
-                   , "stagenetpoints.nejcoinpulse.co"
+    static const std::vector<std::string> stagenet_dns_urls = { "stagenetpoints.pavpatr-nat.pilsfree.net"
     };
 
     if (!tools::dns_utils::load_txt_records_from_dns(records, nettype == TESTNET ? testnet_dns_urls : nettype == STAGENET ? stagenet_dns_urls : dns_urls))
