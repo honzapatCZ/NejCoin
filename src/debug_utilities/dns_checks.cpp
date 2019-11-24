@@ -138,7 +138,7 @@ int main(int argc, char* argv[])
 
   // those are in the code, but don't seem to actually exist
 #if 0
-  lookup(LOOKUP_TXT, {"testpoints.pavpatr-nat.pilsfree.net");
+  lookup(LOOKUP_TXT, {"testpoints.pavpatr-nat.pilsfree.net"});
 
   lookup(LOOKUP_TXT, {"stagenetpoints.pavpatr-nat.pilsfree.net"});
 #endif
